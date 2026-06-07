@@ -49,12 +49,33 @@
   commits with a PAT scoped to <code>jeremiahbuttler/aideamaker</code>).
   <strong>Bearly Defense is not wired</strong> — SSH classifier blocked the
   out-of-boundary server; run the block in <code>docs/site-composer-wiring.md</code>
-  or re-authorize SSH. <strong>Landmine:</strong> local <code>Projects\AideaMaker</code>
-  repo remote wrongly points at <code>bearly-defense.git</code> — don't push
-  AideaMaker files from there.</p>
+  or re-authorize SSH. <strong>Landmine FIXED:</strong> local
+  <code>Projects\AideaMaker</code> remote was wrongly tracking
+  <code>bearly-defense.git</code>; repointed to its own <code>aideamaker.git</code>
+  (clean URL, dropped misplaced PAT). Both projects now use their own repo. Local
+  AideaMaker is ahead 3 of its repo and the server has 3 divergent commits (incl.
+  rabble) on the same base — reconcile before pushing.</p>
 </div>
 
 <h2>Change history</h2>
+
+<div class="entry">
+  <p class="date">2026-06-06 — Fixed AideaMaker local repo wiring (was pointing at bearly-defense)</p>
+  <p><strong>What changed:</strong> repointed <code>Projects\AideaMaker</code>'s git
+  remote from <code>bearly-defense.git</code> to its correct
+  <code>aideamaker.git</code> (clean URL; removed the misplaced bearly PAT) and set
+  upstream to <code>origin/main</code>. Confirmed <code>Projects\Bearly Defense</code>
+  already tracks <code>bearly-defense.git</code> and is in sync.</p>
+  <p><strong>Why:</strong> the AideaMaker project was pointing at the Bearly Defense
+  repo; user asked to make each site use its own repo.</p>
+  <p><strong>Details:</strong> verified by content first — AideaMaker folder is the
+  <code>aideamaker.com</code> site (UUID <code>790db6bd…</code>), Bearly is
+  <code>bearlynature.com</code>; no content swapped. Local history descends from
+  <code>aideamaker.git</code> (base <code>aec413b</code>), so it was only pushing to
+  the wrong remote. Did not push the 3 local commits — server has its own divergent
+  commits (incl. rabble) on the same base; reconciliation is user-gated.</p>
+  <p><strong>Files touched:</strong> <code>Projects\AideaMaker\.git\config</code>.</p>
+</div>
 
 <div class="entry">
   <p class="date">2026-06-06 — AideaMaker wired + live via Composer; Bearly Defense pending</p>

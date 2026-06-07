@@ -48,10 +48,14 @@ used on AideaMaker. See `docs/site-composer-wiring.md`.
   to the `bearlydefense` server (boundary is the aideamaker rabble folder only).
   Run the wiring block in `docs/site-composer-wiring.md` on that server, or
   re-authorize SSH for it.
-- **Local-repo landmine (flag, untouched):** `Projects\AideaMaker`'s git remote
-  points at `JeremiahButtler/bearly-defense.git` (ahead 89 / behind 15) — pushing
-  AideaMaker composer files from that local folder would corrupt the Bearly Defense
-  repo. Needs untangling in the AideaMaker/Bearly projects.
+- **Local-repo landmine — FIXED:** `Projects\AideaMaker` was wrongly tracking
+  `bearly-defense.git`; repointed to its own `aideamaker.git` (clean URL, dropped
+  the misplaced bearly PAT), upstream set to `origin/main`. Both local projects now
+  use their own repo (Bearly was already correct). Remaining: AideaMaker local is
+  **ahead 3** of `aideamaker.git` (auto-save commits) and the **server** has its
+  own 3 divergent commits (config drift + rabble `5848332`) on the same base
+  `aec413b` — reconcile before pushing (recommended: server is authoritative; push
+  its commits to origin with an aideamaker-write PAT, then align the local copy).
 - Reference docs `RABBLE-THEME.md` were placed in both site projects and left
   **untracked** (per user choice) — not committed to either site repo.
 - Future theme edits: edit here, commit, tag, push; sites update via Composer.
@@ -59,6 +63,26 @@ used on AideaMaker. See `docs/site-composer-wiring.md`.
 ---
 
 ## Change history
+
+### 2026-06-06 — Fixed AideaMaker local repo wiring (was pointing at bearly-defense)
+- **What changed:** Repointed `Projects\AideaMaker`'s git remote from
+  `JeremiahButtler/bearly-defense.git` to its correct `JeremiahButtler/aideamaker.git`
+  (clean URL; removed the misplaced bearly-defense PAT that was embedded in it) and
+  set upstream tracking to `origin/main`. Confirmed `Projects\Bearly Defense`
+  already correctly tracks `bearly-defense.git` and is in sync.
+- **Why:** User reported the AideaMaker project was pointing at the Bearly Defense
+  repo and asked to make each site use its own repo. The mis-wiring meant
+  AideaMaker's pushes (and any composer-file push for the rabble rollout) targeted
+  the wrong repo.
+- **Details:** Verified by content before changing remotes — AideaMaker folder is
+  the `aideamaker.com` site (UUID `790db6bd-37cb-4a62-8721-b0624e0b0775`), Bearly
+  folder is `bearlynature.com`; no content was swapped. The local AideaMaker history
+  descends from `aideamaker.git` (shared base `aec413b`), so it was only ever
+  pushing to the wrong remote; against its real repo it is just ahead 3. The bogus
+  "ahead 89 / behind 15" was the wrong-repo comparison. Did NOT push the 3 local
+  commits — the live server has its own 3 divergent commits (incl. rabble) on the
+  same base; reconciliation is a separate, user-gated decision.
+- **Files touched:** `Projects\AideaMaker\.git\config` (remote URL + upstream).
 
 ### 2026-06-06 — AideaMaker wired + live via Composer; Bearly Defense pending
 - **What changed:** On the AideaMaker server, ran `composer require
