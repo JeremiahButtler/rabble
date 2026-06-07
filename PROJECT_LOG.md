@@ -36,37 +36,42 @@ each site adds a VCS repository pointing at this repo and requires
 used on AideaMaker. See `docs/site-composer-wiring.md`.
 
 **Next steps / open items:**
-- **AideaMaker is wired + LIVE + CANONICAL** — fully reconciled: server, origin
-  `aideamaker.git`, and the local copy are all the identical commit `5848332`.
-  rabble is Enabled (11.x), the default theme; the healthy composer.lock (all asset
-  packages) is restored everywhere. The rabble require is now durable in the GitHub
-  repo. Nothing outstanding for AideaMaker.
-- **Bearly Defense is NOT wired yet** — the auto-mode SSH classifier blocked access
-  to the `bearlydefense` server (boundary is the aideamaker rabble folder only).
-  Run the wiring block in `docs/site-composer-wiring.md` on that server, or
-  re-authorize SSH for it.
-- **Local-repo landmine — FIXED:** `Projects\AideaMaker` was wrongly tracking
-  `bearly-defense.git`; repointed to its own `aideamaker.git` (clean URL, dropped
-  the misplaced bearly PAT), upstream set to `origin/main`. Both local projects now
-  use their own repo (Bearly was already correct). Remaining: AideaMaker local is
-  **ahead 3** of `aideamaker.git` (auto-save commits) and the **server** has its
-  own 3 divergent commits (config drift + rabble `5848332`) on the same base
-  `aec413b`. **Diagnosed:** the server is functionally complete (rabble live,
-  ai_token_counter URL still resolves — `stexcomputers` and `jeremiahbuttler`
-  forks point to the same commit `892ff1b` — asset packages intact). The local 3
-  commits hold NO content the server needs: a cosmetic ai_token_counter URL tidy, a
-  **corrupt** composer.lock that dropped ~21 asset packages (would break the site),
-  and local-only docs. They are safe to discard. **Real remaining gap:** origin
-  `aideamaker.git` is still at `aec413b`, missing the server's 3 commits. To close
-  it (needs an aideamaker-write PAT): push the server's 3 commits to origin, then
-  reset local to match origin.
-- Reference docs `RABBLE-THEME.md` were placed in both site projects and left
-  **untracked** (per user choice) — not committed to either site repo.
-- Future theme edits: edit here, commit, tag, push; sites update via Composer.
+- **BOTH SITES COMPLETE — rabble installed via Composer, live, and canonical.**
+  - **AideaMaker:** server, origin `aideamaker.git`, and local copy all at commit
+    `5848332`. rabble Enabled (11.x), default theme; healthy composer.lock restored.
+  - **Bearly Defense:** server, origin `bearly-defense.git`, and local copy all at
+    commit `7e7a503`. rabble Enabled (11.x), default theme.
+- **Local repos both correctly wired:** `Projects\AideaMaker` → `aideamaker.git`,
+  `Projects\Bearly Defense` → `bearly-defense.git`. (Earlier `Projects\AideaMaker`
+  was wrongly tracking `bearly-defense.git`; fixed, misplaced PAT removed.)
+- Reference docs `RABBLE-THEME.md` exist in both site projects, left **untracked**.
+- **Future updates:** edit the theme here, commit, tag, push; then on each site run
+  `composer update drupal/rabble && drush cr` (or let auto-deploy pull). The two
+  sites push to their own repos via different auth: AideaMaker pushes from the LOCAL
+  copy (GCM https), Bearly's server pushes directly (SSH host-alias `github.com-bearly`).
 
 ---
 
 ## Change history
+
+### 2026-06-06 — Reconciled Bearly Defense: rabble now canonical in bearly-defense.git
+- **What changed:** The Bearly Defense server was already wired (rabble required via
+  Composer, Enabled 11.x, default theme, at commit `7e7a503`) but its origin
+  `bearly-defense.git` lagged. Pushed the server's commit to origin via the server's
+  SSH host-alias remote, then fast-forwarded the local copy. Server, origin, and the
+  local `Projects\Bearly Defense` copy are now the identical commit `7e7a503`.
+- **Why:** User directed (emphatically) to use the authorized SSH access and finish
+  the second site, closing the canonical-durability gap the same way AideaMaker's was.
+- **Details:** SSH'd to the server, confirmed HEAD `7e7a503` with rabble Enabled
+  (11.x) + default and a single `drupal/rabble` require in `composer.json`. Bearly's
+  server remote is the SSH alias `git@github.com-bearly:JeremiahButtler/bearly-defense.git`
+  (its own deploy key has write), so the push ran server-side as a clean fast-forward
+  `b572a84..7e7a503` — no local credential needed (this differs from AideaMaker, which
+  pushes from the LOCAL copy via GCM). Then `git merge --ff-only origin/main` on the
+  local copy advanced it to `7e7a503`; verified local HEAD = origin/main = `7e7a503`.
+- **Files touched (server + remotes, not this repo):** bearlydefense server git HEAD
+  (already at `7e7a503`); `bearly-defense.git` origin (fast-forwarded); local
+  `Projects\Bearly Defense` (fast-forwarded). This theme repo unchanged.
 
 ### 2026-06-06 — Reconciled AideaMaker: rabble now canonical in aideamaker.git
 - **What changed:** Pushed the AideaMaker server's 3 commits (config drift + rabble

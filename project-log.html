@@ -41,16 +41,42 @@
   <p><strong>SSH scope (strict):</strong> this project may SSH only to touch
   <code>/var/www/html/aideamaker/web/themes/contrib/rabble</code>; everything else
   on that server belongs to other projects.</p>
-  <p><strong>Next:</strong> <strong>AideaMaker is fully done</strong> — rabble
-  installed via Composer, Enabled (11.x), default theme; server, origin
-  <code>aideamaker.git</code>, and the local copy are all the identical commit
-  <code>5848332</code>, so the rabble require is canonical + durable. Both local
-  projects use their own repo (the earlier <code>bearly-defense.git</code> mis-wiring
-  was fixed). <strong>Bearly Defense is still not wired</strong> — run the block in
-  <code>docs/site-composer-wiring.md</code> on that server, or re-authorize SSH.</p>
+  <p><strong>Next:</strong> <strong>BOTH SITES COMPLETE.</strong> rabble is installed
+  via Composer, Enabled (11.x), and the default theme on each, and is canonical +
+  durable in each site's own repo. <strong>AideaMaker:</strong> server, origin
+  <code>aideamaker.git</code>, and local copy all at commit <code>5848332</code>.
+  <strong>Bearly Defense:</strong> server, origin <code>bearly-defense.git</code>, and
+  local copy all at commit <code>7e7a503</code>. Both local projects use their own repo
+  (the earlier <code>bearly-defense.git</code> mis-wiring was fixed). Future updates:
+  edit the theme here, commit/tag/push, then on each site
+  <code>composer update drupal/rabble &amp;&amp; drush cr</code> — AideaMaker pushes
+  from the LOCAL copy (GCM https), Bearly's server pushes directly (SSH host-alias
+  <code>github.com-bearly</code>).</p>
 </div>
 
 <h2>Change history</h2>
+
+<div class="entry">
+  <p class="date">2026-06-06 — Reconciled Bearly Defense: rabble now canonical in bearly-defense.git</p>
+  <p><strong>What changed:</strong> the Bearly Defense server was already wired (rabble
+  required via Composer, Enabled 11.x, default theme, at <code>7e7a503</code>) but its
+  origin <code>bearly-defense.git</code> lagged. Pushed the server's commit to origin
+  via the server's SSH host-alias remote, then fast-forwarded the local copy. Server,
+  origin, and the local copy are now the identical commit <code>7e7a503</code>.</p>
+  <p><strong>Why:</strong> user directed (emphatically) to use the authorized SSH
+  access and finish the second site, closing the same canonical-durability gap as
+  AideaMaker's.</p>
+  <p><strong>Details:</strong> SSH'd in, confirmed HEAD <code>7e7a503</code> with rabble
+  Enabled (11.x) + default and a single <code>drupal/rabble</code> require. Bearly's
+  server remote is the SSH alias
+  <code>git@github.com-bearly:JeremiahButtler/bearly-defense.git</code> (its deploy key
+  has write), so the push ran server-side as a clean fast-forward
+  <code>b572a84..7e7a503</code> — no local credential needed (unlike AideaMaker, which
+  pushes from the LOCAL copy via GCM). Then <code>git merge --ff-only origin/main</code>
+  advanced the local copy; verified local HEAD = origin/main = <code>7e7a503</code>.</p>
+  <p><strong>Files touched:</strong> bearlydefense server git, <code>bearly-defense.git</code>
+  origin (fast-forwarded), local Bearly repo. This theme repo unchanged.</p>
+</div>
 
 <div class="entry">
   <p class="date">2026-06-06 — Reconciled AideaMaker: rabble now canonical in aideamaker.git</p>
