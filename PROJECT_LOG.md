@@ -37,8 +37,12 @@ used on AideaMaker. See `docs/site-composer-wiring.md`.
 
 **Next steps / open items:**
 - **BOTH SITES COMPLETE — rabble installed via Composer, live, and canonical.**
-  - **AideaMaker:** server, origin `aideamaker.git`, and local copy all at commit
-    `5848332`. rabble Enabled (11.x), default theme; healthy composer.lock restored.
+  - **AideaMaker:** rabble require is commit `5848332`, canonical in `aideamaker.git`.
+    Server is at `5848332` (has the require; rabble Enabled 11.x + default theme;
+    healthy composer.lock). Local copy + origin/GitHub are one **cosmetic** auto-save
+    commit ahead at `6d0ea0a` (adds only the local `RABBLE-THEME.md` doc). The server's
+    https auto-pull has no interactive credential, so it stays at the functional
+    `5848332` — harmless, since `6d0ea0a` contains no theme/site change.
   - **Bearly Defense:** server, origin `bearly-defense.git`, and local copy all at
     commit `7e7a503`. rabble Enabled (11.x), default theme.
 - **Local repos both correctly wired:** `Projects\AideaMaker` → `aideamaker.git`,

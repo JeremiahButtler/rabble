@@ -43,10 +43,13 @@
   on that server belongs to other projects.</p>
   <p><strong>Next:</strong> <strong>BOTH SITES COMPLETE.</strong> rabble is installed
   via Composer, Enabled (11.x), and the default theme on each, and is canonical +
-  durable in each site's own repo. <strong>AideaMaker:</strong> server, origin
-  <code>aideamaker.git</code>, and local copy all at commit <code>5848332</code>.
-  <strong>Bearly Defense:</strong> server, origin <code>bearly-defense.git</code>, and
-  local copy all at commit <code>7e7a503</code>. Both local projects use their own repo
+  durable in each site's own repo. <strong>AideaMaker:</strong> rabble require is the
+  canonical commit <code>5848332</code>; the server is at <code>5848332</code> (rabble
+  Enabled 11.x + default), while local + origin <code>aideamaker.git</code> are one
+  cosmetic auto-save commit ahead at <code>6d0ea0a</code> (only a doc; the server's
+  https auto-pull has no interactive credential, so it stays at the functional
+  <code>5848332</code>). <strong>Bearly Defense:</strong> server, origin
+  <code>bearly-defense.git</code>, and local copy all at commit <code>7e7a503</code>. Both local projects use their own repo
   (the earlier <code>bearly-defense.git</code> mis-wiring was fixed). Future updates:
   edit the theme here, commit/tag/push, then on each site
   <code>composer update drupal/rabble &amp;&amp; drush cr</code> — AideaMaker pushes
