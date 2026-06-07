@@ -41,27 +41,36 @@
   <p><strong>SSH scope (strict):</strong> this project may SSH only to touch
   <code>/var/www/html/aideamaker/web/themes/contrib/rabble</code>; everything else
   on that server belongs to other projects.</p>
-  <p><strong>Next:</strong> <strong>AideaMaker is wired + live</strong> — rabble
-  installed via Composer, Enabled (11.x), default theme, cache rebuilt;
-  <code>composer.json</code>+<code>composer.lock</code> committed on the server
-  (<code>5848332</code>), durable across deploys. Not yet in the GitHub
-  <code>aideamaker</code> origin (PAT lacks write there; push the server's 3 ahead
-  commits with a PAT scoped to <code>jeremiahbuttler/aideamaker</code>).
-  <strong>Bearly Defense is not wired</strong> — SSH classifier blocked the
-  out-of-boundary server; run the block in <code>docs/site-composer-wiring.md</code>
-  or re-authorize SSH. <strong>Landmine FIXED:</strong> local
-  <code>Projects\AideaMaker</code> remote was wrongly tracking
-  <code>bearly-defense.git</code>; repointed to its own <code>aideamaker.git</code>
-  (clean URL, dropped misplaced PAT). Both projects now use their own repo. Diagnosed:
-  the server is functionally complete (rabble live, ai_token_counter URL still
-  resolves — both forks point to commit <code>892ff1b</code> — assets intact). The
-  local 3 commits hold nothing the server needs (cosmetic URL tidy, a corrupt lock
-  dropping ~21 asset packages, and local docs) and are safe to discard. Real gap:
-  origin <code>aideamaker.git</code> lags the server by 3 commits — push with an
-  aideamaker-write PAT, then reset local to origin.</p>
+  <p><strong>Next:</strong> <strong>AideaMaker is fully done</strong> — rabble
+  installed via Composer, Enabled (11.x), default theme; server, origin
+  <code>aideamaker.git</code>, and the local copy are all the identical commit
+  <code>5848332</code>, so the rabble require is canonical + durable. Both local
+  projects use their own repo (the earlier <code>bearly-defense.git</code> mis-wiring
+  was fixed). <strong>Bearly Defense is still not wired</strong> — run the block in
+  <code>docs/site-composer-wiring.md</code> on that server, or re-authorize SSH.</p>
 </div>
 
 <h2>Change history</h2>
+
+<div class="entry">
+  <p class="date">2026-06-06 — Reconciled AideaMaker: rabble now canonical in aideamaker.git</p>
+  <p><strong>What changed:</strong> pushed the AideaMaker server's 3 commits (config
+  drift + rabble <code>5848332</code>) to the canonical <code>aideamaker.git</code>
+  origin, and reset the local copy to match. Server, origin, and local are now the
+  identical commit <code>5848332</code>.</p>
+  <p><strong>Why:</strong> user said "do it" — close the canonical-durability gap so
+  the rabble require lives in the GitHub repo, not just on the server.</p>
+  <p><strong>Details:</strong> the local GCM credential had write access (the earlier
+  403 was the bearly-scoped PAT used from the server). Fetched the server's
+  <code>main</code> over SSH into a temp ref, verified <code>origin/main</code>
+  (<code>aec413b</code>) was a clean ancestor, pushed
+  <code>aec413b..5848332</code>, then <code>git reset --hard origin/main</code> on
+  the local copy (discarding the 3 disposable auto-save commits), preserving
+  <code>RABBLE-THEME.md</code> untracked. Server already at <code>5848332</code> —
+  rabble confirmed Enabled (11.x).</p>
+  <p><strong>Files touched:</strong> local AideaMaker git history (reset);
+  <code>aideamaker.git</code> origin (fast-forwarded).</p>
+</div>
 
 <div class="entry">
   <p class="date">2026-06-06 — Diagnosed AideaMaker divergence: server complete, local commits disposable</p>

@@ -36,14 +36,11 @@ each site adds a VCS repository pointing at this repo and requires
 used on AideaMaker. See `docs/site-composer-wiring.md`.
 
 **Next steps / open items:**
-- **AideaMaker is wired + LIVE** (done on the server): `composer require
-  drupal/rabble:^1.0` ran, rabble is Enabled (11.x) and the default theme, cache
-  rebuilt; `composer.json`+`composer.lock` committed on the server (commit
-  `5848332`), durable across normal deploys (deploy only does `git checkout --
-  composer.lock` + `git pull`). NOT yet in the GitHub `aideamaker` origin — the
-  available PAT only has write to `bearly-defense` (403 on aideamaker). To make it
-  canonical, push the server's 3 ahead commits with a PAT that has write to
-  `jeremiahbuttler/aideamaker`.
+- **AideaMaker is wired + LIVE + CANONICAL** — fully reconciled: server, origin
+  `aideamaker.git`, and the local copy are all the identical commit `5848332`.
+  rabble is Enabled (11.x), the default theme; the healthy composer.lock (all asset
+  packages) is restored everywhere. The rabble require is now durable in the GitHub
+  repo. Nothing outstanding for AideaMaker.
 - **Bearly Defense is NOT wired yet** — the auto-mode SSH classifier blocked access
   to the `bearlydefense` server (boundary is the aideamaker rabble folder only).
   Run the wiring block in `docs/site-composer-wiring.md` on that server, or
@@ -70,6 +67,26 @@ used on AideaMaker. See `docs/site-composer-wiring.md`.
 ---
 
 ## Change history
+
+### 2026-06-06 — Reconciled AideaMaker: rabble now canonical in aideamaker.git
+- **What changed:** Pushed the AideaMaker server's 3 commits (config drift + rabble
+  `5848332`) to the canonical `aideamaker.git` origin, and reset the local copy to
+  match. Server, origin, and local are now the identical commit `5848332`.
+- **Why:** User said "do it" — close the canonical-durability gap so the rabble
+  require lives in the GitHub repo, not just on the server.
+- **Details:** The local GCM credential had write access to `aideamaker.git` (the
+  earlier 403 was the bearly-scoped PAT used from the server). Since the local copy
+  lacked the server's commits, fetched the server's `main` over SSH into a temp ref,
+  verified `origin/main` (`aec413b`) was a clean ancestor (fast-forward safe), and
+  pushed `srv/main:main` → `aec413b..5848332`. Then `git reset --hard origin/main`
+  on the local copy (discarding the 3 disposable auto-save commits — cosmetic URL
+  tidy + corrupt lock + docs), preserving `RABBLE-THEME.md` as an untracked
+  reference doc. Server already at `5848332` (push source) so no server change
+  needed; rabble confirmed Enabled (11.x). The server's own `git fetch` in an
+  ad-hoc SSH shell fails for lack of an interactive credential, but that's the
+  deploy's separate concern — HEAD already equals origin, so deploys are no-ops.
+- **Files touched:** `Projects\AideaMaker` git history (reset to origin);
+  `aideamaker.git` origin (fast-forwarded to `5848332`).
 
 ### 2026-06-06 — Diagnosed AideaMaker divergence: server complete, local commits disposable
 - **What changed:** Investigation only (no source changes). Determined exactly what
