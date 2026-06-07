@@ -43,21 +43,51 @@
   on that server belongs to other projects.</p>
   <p><strong>Next:</strong> <strong>BOTH SITES COMPLETE.</strong> rabble is installed
   via Composer, Enabled (11.x), and the default theme on each, and is canonical +
-  durable in each site's own repo. <strong>AideaMaker:</strong> rabble require is the
-  canonical commit <code>5848332</code>; the server is at <code>5848332</code> (rabble
-  Enabled 11.x + default), while local + origin <code>aideamaker.git</code> are one
-  cosmetic auto-save commit ahead at <code>6d0ea0a</code> (only a doc; the server's
-  https auto-pull has no interactive credential, so it stays at the functional
-  <code>5848332</code>). <strong>Bearly Defense:</strong> server, origin
+  durable in each site's own repo. <strong>AideaMaker:</strong> the rabble require
+  (introduced at <code>5848332</code>, now an ancestor of the tip) is canonical in
+  <code>aideamaker.git</code>; <strong>server == origin == <code>00b8174</code></strong>
+  (rabble Enabled 11.x + default). On 2026-06-07 the server's auto-deploy was repaired so
+  it now pushes server-side changes UP to git via an SSH deploy key; the local copy is at
+  <code>6d0ea0a</code>, a clean ancestor of <code>00b8174</code> (fast-forwardable, no
+  divergence). <strong>Bearly Defense:</strong> server, origin
   <code>bearly-defense.git</code>, and local copy all at commit <code>7e7a503</code>. Both local projects use their own repo
   (the earlier <code>bearly-defense.git</code> mis-wiring was fixed). Future updates:
   edit the theme here, commit/tag/push, then on each site
-  <code>composer update drupal/rabble &amp;&amp; drush cr</code> — AideaMaker pushes
-  from the LOCAL copy (GCM https), Bearly's server pushes directly (SSH host-alias
-  <code>github.com-bearly</code>).</p>
+  <code>composer update drupal/rabble &amp;&amp; drush cr</code> — AideaMaker's local copy
+  pushes via GCM https and its server now pushes via SSH host-alias
+  <code>github.com-aideamaker</code>; Bearly's server pushes via SSH host-alias
+  <code>github.com-bearly</code>.</p>
 </div>
 
 <h2>Change history</h2>
+
+<div class="entry">
+  <p class="date">2026-06-07 — AideaMaker server→git auto-deploy repaired (affects how rabble updates propagate)</p>
+  <p><strong>What changed:</strong> fixed the broken AideaMaker server→git auto-update
+  flow and brought <code>aideamaker.git</code> fully in sync with the server
+  (<code>server == origin == 00b8174</code>). Done in the AideaMaker project; logged here
+  because it changes how rabble updates reach that site and corrects now-stale claims in
+  this brief.</p>
+  <p><strong>Why:</strong> server-side composer changes were silently never reaching git,
+  so a future <code>composer update drupal/rabble</code> committed on the server could
+  have been lost. User directed: "you do it and verify it gets fixed."</p>
+  <p><strong>Details:</strong> root cause was <code>scripts/deploy.sh</code> running
+  <code>git checkout -- composer.lock</code> every deploy tick, which discarded all
+  server-side composer changes and then deadlocked <code>git pull --rebase</code>. Rewrote
+  <code>deploy.sh</code> (removed the discard; drift commit now stages
+  <code>config/sync</code> + <code>composer.json</code> + <code>composer.lock</code>;
+  pull-before-push). Replaced the dead bearly-scoped PAT with an <strong>SSH deploy
+  key</strong> (<code>github.com-aideamaker</code> host alias, canonical-cased remote) so
+  the server can push. Captured a server-only <code>commerce_shipping ^3.0</code> add into
+  git. Verified <code>HEAD == origin == 00b8174</code>, deploy log quiet. Separately
+  diagnosed the long-flagged <code>search_api.index.personal_information_index</code> config
+  diff as a <strong>harmless phantom</strong> — exported live config is byte-identical to
+  git (<code>md5 eaeb9790…</code>), so the deploy's <code>config:import</code> is a no-op.</p>
+  <p><strong>Files touched (AideaMaker server + remote, not this repo):</strong>
+  <code>scripts/deploy.sh</code>, <code>composer.json</code>, <code>composer.lock</code>
+  (committed on the server, pushed to <code>aideamaker.git</code>); AideaMaker memory note.
+  This theme repo: PROJECT_LOG.md, project-log.html only.</p>
+</div>
 
 <div class="entry">
   <p class="date">2026-06-06 — Reconciled Bearly Defense: rabble now canonical in bearly-defense.git</p>
