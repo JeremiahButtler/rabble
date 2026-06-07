@@ -1,0 +1,13 @@
+# Normalize all text to LF so the theme checks out identically on the Linux servers
+* text=auto eol=lf
+
+# Binary assets — never touch line endings
+*.png binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
