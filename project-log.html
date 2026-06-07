@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Log — Drupal Rabble Theme</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+         max-width: 50rem; margin: 2rem auto; padding: 0 1rem; }
+  h1 { margin-bottom: .25rem; }
+  .sub { color: #777; margin-top: 0; }
+  .brief { background: rgba(127,127,127,.12); border-radius: 10px;
+           padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .entry { border-left: 3px solid #6aa; padding-left: 1rem; margin: 1.25rem 0; }
+  .date { font-weight: 600; }
+  code { background: rgba(127,127,127,.18); padding: .1em .35em; border-radius: 4px; }
+  a { color: #2a7ae2; }
+</style>
+</head>
+<body>
+<h1>Project Log — Drupal Rabble Theme</h1>
+<p class="sub">Source-of-truth repo for the Rabble Drupal theme. Newest first.</p>
+
+<div class="brief">
+  <h2>Resume Brief (current state)</h2>
+  <p><strong>What this is:</strong> the source-of-truth git repository for
+  <strong>Rabble</strong>, a Drupal front-end theme (machine name <code>rabble</code>,
+  Drupal 10/11/12). Authored by Jeremiah Buttler, owned by AideaMaker LLC.</p>
+  <p><strong>Repository:</strong>
+  <a href="https://github.com/JeremiahButtler/rabble">github.com/JeremiahButtler/rabble</a>
+  (public) · Composer package <code>drupal/rabble</code> · current tag
+  <strong>1.0.0</strong>.</p>
+  <p><strong>Source of truth:</strong> pulled from the AideaMaker server copy at
+  <code>/var/www/html/aideamaker/web/themes/contrib/rabble</code>. The Bearly
+  Defense copy was byte-identical at import.</p>
+  <p><strong>Consumers:</strong> AideaMaker and Bearly Defense (same Linux server).
+  Both use the Composer-artifact model, so <code>web/themes/contrib/</code> is
+  already gitignored in each — Rabble is excluded from both sites' repos and
+  installed via Composer from this repo.</p>
+  <p><strong>SSH scope (strict):</strong> this project may SSH only to touch
+  <code>/var/www/html/aideamaker/web/themes/contrib/rabble</code>; everything else
+  on that server belongs to other projects.</p>
+  <p><strong>Next:</strong> wire each site's <code>composer.json</code> to require
+  <code>drupal/rabble</code> (handled through each site's own project — see
+  <code>docs/site-composer-wiring.md</code>).</p>
+</div>
+
+<h2>Change history</h2>
+
+<div class="entry">
+  <p class="date">2026-06-06 — Project created; theme extracted to its own public repo</p>
+  <p><strong>What changed:</strong> created the project, pulled the Rabble theme
+  from AideaMaker (source of truth) into the repo root, added a Composer manifest
+  (<code>drupal/rabble</code>, type <code>drupal-theme</code>),
+  <code>.gitignore</code>, and <code>.gitattributes</code>.</p>
+  <p><strong>Why:</strong> manage Rabble from one dedicated repo so AideaMaker and
+  Bearly Defense install/update it via Composer instead of each carrying an
+  untracked copy.</p>
+  <p><strong>Details:</strong> initialized git on <code>main</code>, created the
+  public GitHub repo <code>JeremiahButtler/rabble</code>, pushed, tagged
+  <strong>1.0.0</strong>, applied the default skill bundle (matching the AI Token
+  Counter skill set), and added a reference in the AideaMaker project.</p>
+</div>
+
+</body>
+</html>

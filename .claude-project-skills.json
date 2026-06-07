@@ -1,0 +1,52 @@
+{
+  "applied_skills": {
+    "feature-list": {
+      "fingerprint": "sha256:ae5995b9e18a4ee09ae40b25236ade1f225799a282fa14c509a6421e4026e1dc",
+      "applied": "2026-06-06"
+    },
+    "project-credits": {
+      "fingerprint": "sha256:76a76ba801c621e5bc013e13118dc3777ee3807a0c79cfe3f2f914628b8029de",
+      "applied": "2026-06-06"
+    },
+    "project-tracking": {
+      "fingerprint": "sha256:38c6f06dfc0f3c8896deba5a3d641760f5c2daf8360f077cb66d0ff415892787",
+      "applied": "2026-06-06"
+    },
+    "terms-and-conditions": {
+      "fingerprint": "sha256:b3a84a5f70a7ec061ae07e985e6f5bd81aebefb359ce9183ce8801bb356902f2",
+      "applied": "2026-06-06"
+    },
+    "program-defaults": {
+      "fingerprint": "sha256:1d3b45aa145c7598a45f375986f26caa836f7dbefc3db55e10717cd5a546fda9",
+      "applied": "2026-06-06"
+    },
+    "ai-providers": {
+      "fingerprint": "sha256:0efb7c2fbbaa5a2dad23f7bacc7690810171875e41cdcfb7b5e44be73998f317",
+      "applied": "2026-06-06"
+    },
+    "standing-rules": {
+      "fingerprint": "sha256:4b2d7f93d56e0a70c3b45e4b9b241961af65900a6d1260622e3da9a89f2219b6",
+      "applied": "2026-06-06"
+    },
+    "drupal-build": {
+      "fingerprint": "sha256:801b8b0dc683ed914a988d6e4a07fd02571c9fb5927ba9e3c4c607a9034dc1c3",
+      "applied": "2026-06-06"
+    },
+    "git-repo": {
+      "fingerprint": "sha256:1e5c7f43496a9d74b0d9193748fe7324c16315216ac68c3c312d637581847929",
+      "applied": "2026-06-06"
+    },
+    "file-structure": {
+      "fingerprint": "sha256:9698d6360dd1e4a4d86fe11ce996a0dfa12bc3bcd1d065e065bbf2970a8d4ba7",
+      "applied": "2026-06-06"
+    },
+    "product-logs": {
+      "fingerprint": "sha256:69ef536b79a9de78a608ea7039603eabda48500b78b9ad30b12e69d78dd51b66",
+      "applied": "2026-06-06"
+    },
+    "project-code-review": {
+      "fingerprint": "sha256:a65ed1956b2081e2531ee13b1e177128b7e65f496dd012d89202502d1d77e3c5",
+      "applied": "2026-06-06"
+    }
+  }
+}
