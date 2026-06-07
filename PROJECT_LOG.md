@@ -54,8 +54,15 @@ used on AideaMaker. See `docs/site-composer-wiring.md`.
   use their own repo (Bearly was already correct). Remaining: AideaMaker local is
   **ahead 3** of `aideamaker.git` (auto-save commits) and the **server** has its
   own 3 divergent commits (config drift + rabble `5848332`) on the same base
-  `aec413b` — reconcile before pushing (recommended: server is authoritative; push
-  its commits to origin with an aideamaker-write PAT, then align the local copy).
+  `aec413b`. **Diagnosed:** the server is functionally complete (rabble live,
+  ai_token_counter URL still resolves — `stexcomputers` and `jeremiahbuttler`
+  forks point to the same commit `892ff1b` — asset packages intact). The local 3
+  commits hold NO content the server needs: a cosmetic ai_token_counter URL tidy, a
+  **corrupt** composer.lock that dropped ~21 asset packages (would break the site),
+  and local-only docs. They are safe to discard. **Real remaining gap:** origin
+  `aideamaker.git` is still at `aec413b`, missing the server's 3 commits. To close
+  it (needs an aideamaker-write PAT): push the server's 3 commits to origin, then
+  reset local to match origin.
 - Reference docs `RABBLE-THEME.md` were placed in both site projects and left
   **untracked** (per user choice) — not committed to either site repo.
 - Future theme edits: edit here, commit, tag, push; sites update via Composer.
@@ -63,6 +70,22 @@ used on AideaMaker. See `docs/site-composer-wiring.md`.
 ---
 
 ## Change history
+
+### 2026-06-06 — Diagnosed AideaMaker divergence: server complete, local commits disposable
+- **What changed:** Investigation only (no source changes). Determined exactly what
+  the AideaMaker server is missing relative to the local copy's 3 divergent commits.
+- **Why:** User confirmed the server is authoritative and asked what's missing from
+  it, to decide how to reconcile.
+- **Details:** Answer — functionally **nothing** is missing from the server. The
+  local 3 commits contain: (1) a cosmetic `ai_token_counter` VCS URL change
+  `stexcomputers→jeremiahbuttler` (both `ls-remote` to the SAME commit `892ff1b`, so
+  GitHub redirects; server's URL still works); (2) a corrupt `composer.lock` that
+  removed ~21 frontend asset packages (codemirror, jquery/*, popperjs, tippyjs,
+  etc.) — adopting it would break the site, so the server is correct to keep them
+  (verified intact on server); (3) local-only docs (`RABBLE-THEME.md`,
+  `PROJECT_LOG.md`, `project-log.html`). Conclusion: discard the local 3 commits;
+  the only real gap is origin `aideamaker.git` lagging the server by 3 commits.
+- **Files touched:** none (read-only diagnosis); log files updated.
 
 ### 2026-06-06 — Fixed AideaMaker local repo wiring (was pointing at bearly-defense)
 - **What changed:** Repointed `Projects\AideaMaker`'s git remote from

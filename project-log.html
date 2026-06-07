@@ -52,12 +52,33 @@
   or re-authorize SSH. <strong>Landmine FIXED:</strong> local
   <code>Projects\AideaMaker</code> remote was wrongly tracking
   <code>bearly-defense.git</code>; repointed to its own <code>aideamaker.git</code>
-  (clean URL, dropped misplaced PAT). Both projects now use their own repo. Local
-  AideaMaker is ahead 3 of its repo and the server has 3 divergent commits (incl.
-  rabble) on the same base — reconcile before pushing.</p>
+  (clean URL, dropped misplaced PAT). Both projects now use their own repo. Diagnosed:
+  the server is functionally complete (rabble live, ai_token_counter URL still
+  resolves — both forks point to commit <code>892ff1b</code> — assets intact). The
+  local 3 commits hold nothing the server needs (cosmetic URL tidy, a corrupt lock
+  dropping ~21 asset packages, and local docs) and are safe to discard. Real gap:
+  origin <code>aideamaker.git</code> lags the server by 3 commits — push with an
+  aideamaker-write PAT, then reset local to origin.</p>
 </div>
 
 <h2>Change history</h2>
+
+<div class="entry">
+  <p class="date">2026-06-06 — Diagnosed AideaMaker divergence: server complete, local commits disposable</p>
+  <p><strong>What changed:</strong> investigation only (no source changes) —
+  determined what the AideaMaker server is missing vs the local copy's 3 divergent
+  commits.</p>
+  <p><strong>Why:</strong> user confirmed the server is authoritative and asked
+  what's missing from it.</p>
+  <p><strong>Details:</strong> functionally <strong>nothing</strong> is missing. The
+  local 3 commits contain a cosmetic <code>ai_token_counter</code> URL change
+  (<code>stexcomputers→jeremiahbuttler</code>; both resolve to the same commit
+  <code>892ff1b</code>), a corrupt <code>composer.lock</code> that dropped ~21
+  frontend asset packages (would break the site; server correctly keeps them), and
+  local-only docs. Discard the local 3 commits; the only real gap is origin
+  <code>aideamaker.git</code> lagging the server by 3 commits.</p>
+  <p><strong>Files touched:</strong> none (read-only diagnosis).</p>
+</div>
 
 <div class="entry">
   <p class="date">2026-06-06 — Fixed AideaMaker local repo wiring (was pointing at bearly-defense)</p>
