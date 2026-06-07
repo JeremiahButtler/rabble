@@ -1,0 +1,11 @@
+{
+    "name": "drupal/rabble",
+    "type": "drupal-theme",
+    "description": "Rabble — a clean, accessible, and flexible Drupal front-end theme.",
+    "keywords": [
+        "Drupal",
+        "theme"
+    ],
+    "homepage": "https://github.com/jeremiahbuttler/rabble",
+    "license": "GPL-2.0-or-later"
+}

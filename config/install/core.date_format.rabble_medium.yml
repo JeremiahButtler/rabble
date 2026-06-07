@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    theme:
+      - rabble
+id: rabble_medium
+label: 'rabble Medium'
+locked: false
+pattern: 'j  F,  Y'

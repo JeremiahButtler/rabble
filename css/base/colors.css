@@ -1,0 +1,1080 @@
+/**
+ * Custom Theme Colors
+ * 
+ */
+/** Reset to transparent */
+ul.sf-menu a {
+}
+.menu--account a, #elevated-account-navigation-menu-link-contentb18d49a3-7611-40ed-8f33-3e7ef88b374a > a {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+.main-content-container > #content > article > div > * {
+}
+.form--inline > * {
+    background: transparent;
+    background-color: transparent;
+}
+.form--inline > div > label {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+#content > article > div > div.field.field--name-field-view.field--type-viewfield {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+.active-trail.menuparent > a {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+.fieldset__legend {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+#content > article > div > div.field.field--name-field-in-person-event-address {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+.main-content-container > #content ul > li {
+}
+.fieldset__label {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+.fieldset__legend {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+.main-content-container > #content > article > div > div {
+    background: transparent;
+    background-color: transparent;
+}
+.field-group-fieldset {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+div#block-rabble-mainnavigation-4 {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+.path-user #content {
+    background: transparent ;
+    background-color: transparent;
+}
+.content-container {
+    background: transparent;
+}
+input#edit-submit-public-image-gallery-navigation-page {
+    background: transparent !important;
+}
+.chat-dropdown.active {
+    background-color: transparent !important;
+}
+.page-node-type-ai-assistant .chat-container {
+    background: transparent;
+}
+#superfish-footer > #footer-menu-link-contenta400c889-43f8-463d-a0dd-11a0b5ae706a > a.is-active.sf-depth-1 {
+    background: transparent !important;
+}
+#main > div.main-content > div.main-content__container.content-container {
+    background: transparent;
+}
+body.role-anonymous.path-user .main-content {
+    background: transparent;
+}
+.path-user .main-content__container > main > .content-container {
+    background: transparent;
+}
+.featured-container {
+    background: transparent !important;
+}
+details#edit-timezone .rabble-details__wrapper.details-wrapper {
+    background: transparent !important;
+}
+
+
+
+
+
+
+
+
+
+
+/** Reset to white  */
+
+.main-content-container > #content ul > li a.is-active {
+    color: #fff !important;
+}
+.form-submit a {
+    color: #fff !important;
+}
+.button, .button a {
+
+}
+a.tabs__link.is-active {
+    color: #fff !important;
+}
+ul.sf-main a.is-active, .menu--account a.is-active, ul.sf-menu a.is-active, #elevated-account-navigation-menu-link-contentb18d49a3-7611-40ed-8f33-3e7ef88b374a > a.is-active {
+    color: #fff !important;
+}
+ul.sf-main a:hover, .menu--account a:hover, a.user-login-block-link:hover, ul.sf-menu a:hover {
+    color: #fff !important;
+}
+#block-rabble-views-block-registrations-event-for-staff-phone-size > div > div > div > div.view-content > div.views-row, div#block-rabble-views-block-registrations-event-for-creator-phone-size > div > div > div > div.view-content > div.views-row {
+    background: #fff;
+}
+.sf-menu li.active-trail a, .sf-menu li.active-trail a:hover, div#block-rabble-publicmenu-4 li.active-trail a {
+    color: #fff !important;
+}
+div.listing-single-item > div > .views-row > div.views-field.views-field-field-image {
+    background: #fff;
+}
+.block-ai-chatbot h4 {
+    color: #fff !important;
+}
+#live-chat > header > h4 {
+    color: #fff !important;
+}
+.main-content-container > #content .block-views, .main-content-container > #content > article {
+}
+.button.form-submit {
+    color: #fff !important;
+}
+.view-id-website_messages_block_for_site_users div.information.views-row h2, .view-id-website_messages_block_for_site_users div.information.views-row h3, .view-id-website_messages_block_for_site_users div.information.views-row h4,
+.view-id-website_messages_block_for_site_users div.information.views-row h5,
+.view-id-website_messages_block_for_site_users div.information.views-row h6
+{
+    color: #fff !important;
+}
+#edit-login-register-contact-information-profiles-0-entity-field-telephone-wrapper {
+    background: #fff !important;
+    background-color: #fff !important;
+}
+.js-form-item.form-item.js-form-type-email.form-item-login-register-mail.js-form-item-login-register-mail, .js-form-item.form-item.js-form-type-textfield.form-item-login-register-name.js-form-item-login-register-name, .js-form-item.form-item.js-form-type-textfield.form-item-login-register-name.js-form-item-login-register-name {
+    background: #fff !important;
+    background-color: #fff !important;
+}
+div#block-rabble-publicmenu-4 a:hover {
+    color: #fff !important;
+}
+#edit-submit-content-creation-count-for-staff:hover {
+    background: #fff !important;
+    background-color: #fff !important;
+}
+sf-accordion > .menuparent > ul > li a {
+    color: #fff !important;
+}
+.sf-menu.menu li {
+    color: #fff !important;
+}
+sf-accordion > .menuparent > ul > li a, .sf-depth-1.menuparent.sf-expanded {
+    color: #fff !important;
+	z-index: 10000;
+}
+div#block-startcreating {
+}
+div#block-rabble-sitebranding {
+}
+.tabs-wrapper ul > li.tabs__tab.is-active a {
+    color: #fff !important;
+}
+.site-header .sf-menu.menu li a {
+    color: #fff;
+}
+.site-header a.is-active.sf-depth-2 {
+	color: #fff !important;
+}
+.sf-depth-1.menuparent > ul {
+    background: #fff !important;
+}
+.site-header .sf-depth-2.sf-no-children > a:hover {
+    color: #fff !important;
+}
+.site-header ul#superfish-main > li:last-child {
+    color: #fff !important;
+}
+.field--name-field-view > div > div.views-element-container > div > div.view-content > div > div.views-field.views-field-field-media-image-1 > div {
+	background: rgb(255, 255, 255, 0.5);
+}
+.field--name-field-view > div > div.views-element-container > div > div.view-content > div > div.views-field.views-field-field-media-image-1 > div:hover {
+	background: rgb(144, 238, 144, 1);
+}
+.field--name-field-view > div > div.views-element-container > div > div.view-content > div > div.views-field.views-field-field-media-image-1 > div a:hover {
+	opacity: 1;
+}
+#main > div.content-container > div.region > div, main > div.content-container > div.region.region--content-3 > div {
+}
+div#edit-actions > span.hide-submit-text {
+    color: #fff !important;
+}
+div#edit-field-agree-to-terms-wrapper {
+    background: #fff !important;
+    background-color: #fff !important;
+}
+.main-content {
+    background: #fff;
+}
+.featured-container > .region > .block-views, .content-container > .region > .block-views {
+    background: #fff !important;
+	box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+.main-content-container > #content > article > div > fieldset.aideamaker-details-group {
+    background: #fff;
+}
+.listing-single-item .views-row {
+    background: #fff;
+}
+.form--inline > div > input {
+    background: #fff;
+    background-color: #fff;
+}
+.creation-view {
+}
+.path-user .region.region--user-account-logged-in > div, .path-user .region.region--user-account-logged-in-right > div, .path-user .region.region--user-account-logged-in-left > div {
+    /* filter: drop-shadow(0mm 5mm 4mm #e2ebee); */
+    background: #fff;
+}
+div#edit-account input {
+}
+.grid-3-across {
+    background: #fff;
+}
+.region.region--content-4 > div > h2 {
+}
+div#block-views-block-front-page-my-public-page-tile {
+    float: left;
+    width: 48%;
+    margin: 0 1% 80px;
+    /* border-radius: 10px !important; */
+}
+.featured-container > .region > .block-ai-chatbot {
+    background: #fff;
+}
+#content > article > div > div.field.field--name-field-view.field--type-viewfield.field--label-hidden > div > div.views-element-container > div > div > .views-row {
+    background: #fff;
+    background-color: #fff;
+}
+.text-content {
+    background: #fff;
+}
+div#edit-notification-options-profiles-wrapper > * > div {
+    background: #fff !important;
+}
+.block-views-blocknavigation-page-body-2-block-1 {
+    background: #fff;
+}
+.block-views-blocknavigation-page-body-3-block-1 {
+    background: #fff;
+}
+.block-views-blocknavigation-page-body-4-block-1 {
+    background: #fff;
+}
+.block-views-blocknavigation-page-body-5-block-1 {
+    background: #fff;
+}
+.views_slideshow_cycle_slide {
+    background: #fff;
+}
+.path-frontpage .path-frontpage div.main-content__container.content-container > main > div.content-container.content-1-container > div > div {
+    background: #fff;
+    background-color: #fff;
+}
+.path-frontpage div.main-content__container.content-container > main > div.content-container.content-1-container > div > div {
+        background: #fff;
+}
+.path-frontpage .path-frontpage div.main-content__container.content-container > main > div.content-container.content-2-container > div > div {
+    background: #fff;
+    background-color: #fff;
+}
+.path-frontpage div.main-content__container.content-container > main > div.content-container.content-2-container > div > div {
+    background: #fff !important;
+}
+div#block-content-used-in-location-block {
+    background: #fff;
+}
+.ai-deepchat--header {
+    color: #fff !important;
+}
+#edit-group-display-options > div.details-wrapper {
+    background: #fff;
+}
+.aideamaker-create-button, .create-button {
+    color: #fff !important;
+}
+div#edit-account input#edit-mail, div#edit-account input#edit-name {
+    background: #fff !important;
+}
+form#user-register-form {
+    background: #fff;
+}
+.field-group-fieldset > div > * {
+    background: #fff;
+}
+.node-form > * {
+    background: #fff;
+}
+.darkmode--activated form#user-login-form .actions-suffix a {
+    color: #fff;
+}
+
+
+
+
+
+
+
+/** Primary Darkest Color #245f8f */
+a {
+  /** color: var(--color-text-primary-medium); **/
+	color: #245f8f;
+}
+.text-content a:where(:not(.button)), .cke_editable a:where(:not(.button)) {
+	color: #245f8f !important;
+}
+.rabble-theme {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+.site-footer {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+.site-branding__text a {
+    color: #245f8f !important;
+}
+html {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+.form-submit {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+.button {
+    background: #245f8f;
+    background-color: #245f8f;
+}
+a.tabs__link.is-active {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+ul.sf-main a.is-active {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+.menu--account a.is-active {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+#elevated-account-navigation-menu-link-contentb18d49a3-7611-40ed-8f33-3e7ef88b374a > a.is-active {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+.calendar-view-table thead th {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+.calendar-view-table .calendar-view-day__number {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+#superfish-public-accordion > li {
+    border-bottom: 2px solid #245f8f;
+}
+#content > article > div > div.field.field--name-field-view.field--type-viewfield.field--label-hidden > div > div.views-element-container > div > div > .views-row {
+    border: 1px solid #245f8f;
+}
+#content > article > div > .field--type-viewfield > div > div.views-element-container > div > div.view-filters > .views-exposed-form > div[data-drupal-selector="edit-actions"] {
+    background-color: #245f8f !important;
+    background: #245f8f !important;
+}
+.field-group-fieldset > div > * {
+    border: 1px solid #245f8f;
+}
+#edit-submit-content-creation-count-for-staff {
+    background-color: #245f8f !important;
+    background: #245f8f !important;
+}
+sf-accordion > .menuparent > ul > li a, .sf-depth-1.menuparent.sf-expanded {
+    background-color: #245f8f !important;
+    background: #245f8f !important;
+}
+.site-header {
+    background-color: #245f8f !important;
+    background: #245f8f !important;
+	box-shadow: 1px 2px 4px rgb(20, 20, 20), 0 4px 12px rgb(10, 10, 10);
+}
+div#site-header__inner {
+    background-color: #245f8f !important;
+    background: #245f8f !important;
+}
+#block-content-author-and-created-date-block > div.block__content > div > div > div.view-content > div > span.views-field.views-field-user-picture img {
+    border: 1px solid #245f8f;
+}
+ul.sf-menu.menu {
+    background-color: #245f8f !important;
+    background: #245f8f !important;
+}
+.site-header .sf-depth-2.sf-no-children > a:hover {
+    background-color: #245f8f !important;
+    background: #245f8f !important;
+}
+div#block-rabble-importantreminderforaichatbottherapistusers * {
+    color: #245f8f !important;
+}
+div.listing-single-item > div > .views-row > div.views-field.views-field-field-image > div > a > img {
+    border-right: 1px solid #245f8f;
+}
+.listing-single-item .views-row {
+    border: 1px solid #245f8f;
+}
+#content > article.node--view-mode-full > div.node__content > div.field--name-field-image > img {
+    border: 1px solid #245f8f;
+}
+fieldset.aideamaker-details-group {
+    border: 1px solid #245f8f;
+}
+.path-frontpage img {
+    border: 1px solid #245f8f;
+}
+.form--inline > div > input.form-submit {
+    background-color: #245f8f ;
+    background: #245f8f ;
+}
+.site-footer .text-content {
+    background: #245f8f;
+}
+.page-node-type-ai-assistant .block-ai-chatbot {
+    background: #245f8f;
+}
+.region.region--content-2 > div.block-views > div.block__content {
+
+}
+.path-frontpage .region.region--content-2 > div.block-views > div.block__content {
+    border: unset;
+}
+.region.region--content-3 > div.block-views > div.block__content {
+}
+.region.region--content-4 > div.block-views > div.block__content {
+}
+.region.region--content-5 > div.block-views > div.block__content {
+}
+div#block-rewrite-pro-front-page-tile, div#block-evaluator-pro-front-page-tile, div#block-aideamaker-ideas-front-page-tile, div#block-aideamaker-creations-front-page-tile {
+    border: 1px solid #245f8f;
+}
+div#block-navigation-page-body-2 {
+    border: 1px solid #245f8f;
+}
+.aideamaker-create-button, .create-button {
+    background: #245f8f !important;
+}
+body.role-anonymous.path-user div#main-wrapper {
+}
+div#page {
+}
+.path-user .rabble-details__wrapper {
+    background: #245f8f;
+}
+form#user-register-form {
+    background: #245f8f;
+}
+
+
+
+
+
+/** Secondary Color #9fc6e7 */
+div.field.field--name-field-event-agenda > div.field__item > div.paragraph--type--event-agenda {
+    background-color: #9bc1e6 !important;
+}
+.page-node-type-event .fieldset {
+    background-color: #9bc1e6 !important;
+}
+.page-node-type-event div#block-rabble-views-block-organizer-block-for-event-landing-page {
+    background-color: #9bc1e6 !important;
+}
+.page-node-type-event div.main-content__container.content-container > main > div.content-container.content-1-container > div > div {
+    background: #9bc1e6 !important;
+}
+main > div.content-container > div.region.region--content-3 > div {
+}
+.calendar-view-day__row:nth-child(even) {
+    background-color: #9bc1e6 !important;
+}
+#user-login-form .actions-suffix {
+}
+.button:hover , .button a:hover {
+	background-color: #9bc1e6 !important;
+}
+.button.form-submit:disabled {
+	background-color: #9bc1e6 !important;
+}
+.button:disabled:hover {
+	background-color: #9bc1e6 !important;
+}
+#user-login-form .actions-suffix:hover, user-login-form .actions-suffix a:hover,
+#user-login-form .actions-suffix:focus {
+	background-color: #9bc1e6 !important;
+}
+ul.sf-main a.is-active:hover, .menu--account a.is-active:hover, ul.sf-menu a.is-active:hover, ul.sf-main a.active-trail:hover, .menu--account a.active-trail:hover, ul.sf-menu a.active-trail:hover, li.active-trail a:hover, li.sf-menu.active-trail a:hover {
+	background-color: #9bc1e6 !important;
+}
+ul.sf-main a.is-active:hover, .menu--account a.is-active:hover, ul.sf-menu a.is-active:hover, ul.sf-main a.active-trail:hover, .menu--account a.active-trail:hover, ul.sf-menu a.active-trail:hover, li.active-trail a:hover, li.sf-menu.active-trail a:hover {
+	background-color: #9bc1e6 !important;
+}
+ul.sf-main a.active-trail, .menu--account a.active-trail, ul.sf-menu a.active-trail, li.active-trail a, li.sf-menu.active-trail a, #elevated-account-navigation-menu-link-contentb18d49a3-7611-40ed-8f33-3e7ef88b374a > a.active-trail {
+	background-color: #9bc1e6 !important;
+}
+ul.sf-menu ul {
+}
+.ck-button.ai-dropdown {
+    background: #9bc1e6 !important;
+    background-color: #9bc1e6 !important;
+}
+blockquote {
+    background: #9bc1e6 !important;
+    background-color: #9bc1e6 !important;
+}
+ul.sf-menu.sf-accordion.sf-expanded, ul.sf-menu.sf-accordion li.sf-expanded > ul {
+    background: #9bc1e6 !important;
+    background-color: #9bc1e6 !important;
+}
+sf-accordion > .menuparent > ul > li a {
+    background: #9bc1e6 !important;
+    background-color: #9bc1e6 !important;
+}
+div#block-rabble-importantreminderforaichatbottherapistusers {
+
+    border-top: 4px solid #9bc1e6;
+}
+
+ul#superfish-main--2 {
+    background: #9bc1e6 !important;
+    background-color: #9bc1e6 !important;
+	box-shadow: 1px 0px 1px rgb(20, 20, 20), 0 4px 20px rgb(10, 10, 10);
+}
+.site-header .active-trail.sf-depth-1 > a.is-active {
+    background: #9bc1e6 !important;
+}
+.posting-count-view {
+    background: #9bc1e6 !important;
+    background-color: #9bc1e6 !important;
+}
+.pager__items {
+    background: rgb(155,193,230, .5) !important;
+}
+.view-individual-product-blocks > div, .view-individual-product-block-monthly-options > div {
+    background: #9bc1e6 !important;
+}
+.path-frontpage .content-container.content-3-container {
+    background: #9bc1e6;
+}
+
+
+
+
+
+
+
+
+
+/** Accent Color #e5f8ff */
+.page-node-type-event .main-content {
+    background: #e2ebee !important;
+}
+.page-node-type-event .page-wrapper {
+    /* max-width: var(--max-bg-color); */
+    background: #e2ebee !important;
+}
+.calendar-view-day__row:nth-child(odd) {
+    background-color: #e2ebee !important;
+}
+.field.field--name-field-event-agenda {
+    background: #e2ebee !important;
+}
+.page-node-type-event .content-container > .region > .block-views, .page-node-type-event .featured-container > .region > .block-views {
+    background-color: #e5f8ff !important;
+}
+div#block-rabble-views-block-organizer-block-for-event-landing-page {
+    background-color: #e2ebee !important;
+}
+ul#superfish-footer > li > a {
+    color: #e2ebee !important;
+}
+#user-login-form .actions-suffix:disabled,
+#user-login-form .actions-suffix.is-disabled {
+    background: #e2ebee !important;
+}
+.calendar-view-table td {
+    background: #e2ebee !important;
+}
+div.field--name-field-in-person-event-address.field--type-address > p {
+    background-color: #e2ebee;
+}
+.path-user .region.region--user-account-logged-in > div, .path-user .region.region--user-account-logged-in-right > div, .path-user .region.region--user-account-logged-in-left > div {
+    /* filter: drop-shadow(0mm 5mm 4mm #e2ebee); */
+	box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+fieldset#edit-contact-information-profiles-widget-0-entity-group-employment-details, fieldset#edit-contact-information-profiles-widget-0-entity-group-contact-details, fieldset#edit-contact-information-profiles-widget-0-entity-group-personal-details {
+    background: #e2ebee !important;
+}
+div#edit-user-picture-wrapper, div#edit-notification-options-profiles-wrapper {
+    background: #e2ebee !important;
+    background-color: #e2ebee !important;
+}
+.webform-submission-form {
+    background: #e2ebee !important;
+    background-color: #e2ebee !important;
+}
+fieldset#edit-login-returning-customer, fieldset#edit-login-register  {
+    background: #e2ebee !important;
+    background-color: #e2ebee !important;
+}
+.rabble-details__wrapper.details-wrapper > fieldset {
+    border: solid 1px #e2ebee !important;
+}
+
+div#edit-account, div#edit-field-agree-to-terms-wrapper, details#edit-timezone, fieldset.captcha.captcha-type-challenge--recaptcha, fieldset.captcha.captcha-type-challenge--recaptcha * {
+    background: #e2ebee !important;
+    background-color: #e2ebee !important;
+}
+div#live-chat {
+    background: #e2ebee !important;
+}
+.main-content {
+    background: #e2ebee;
+}
+.content-container {
+    background: #e2ebee;
+}
+.social-sharing-buttons {
+    background: #e2ebee;
+}
+.featured-container {
+    background: #e2ebee;
+}
+
+
+
+
+
+/** Primary Black Color #343434 */
+.button.form-submit:disabled {
+    color: #343434 !important;
+    border: 2px solid #343434 !important;
+}
+.button:disabled:hover {
+    color: #343434 !important;
+    border: 2px solid #343434 !important;
+}
+.path-node .button.form-submit:disabled {
+    display: none;
+    visibility: hidden;
+}
+#user-login-form .actions-suffix:active {
+	background-color: #343434 !important;
+    background: #343434 !important;
+}
+.button:hover , .button a:hover {
+    color: #343434 !important;
+}
+.button.form-submit:hover {
+	color: #343434 !important;
+}
+#user-login-form .actions-suffix:hover {
+    color: #343434 !important;
+}
+.tabs__link {
+    color: #343434 !important;
+}
+ul.sf-main a.is-active:hover, .menu--account a.is-active:hover, ul.sf-menu a.is-active:hover, ul.sf-main a.active-trail:hover, .menu--account a.active-trail:hover, ul.sf-menu a.active-trail:hover, li.active-trail a:hover, li.sf-menu.active-trail a:hover {
+    color: #343434 !important;
+}
+ul#superfish-footer > li > a:hover {
+    background: #343434 !important;
+}
+ul.sf-main a.active-trail, .menu--account a.active-trail, ul.sf-menu a.active-trail, li.active-trail a, li.sf-menu.active-trail a, #elevated-account-navigation-menu-link-contentb18d49a3-7611-40ed-8f33-3e7ef88b374a > a.active-trail {
+    color: #343434 !important;
+}
+ul.sf-main a.active-trail, .menu--account a.active-trail, ul.sf-menu a.active-trail, li.active-trail a, li.sf-menu.active-trail a, #elevated-account-navigation-menu-link-contentb18d49a3-7611-40ed-8f33-3e7ef88b374a > a.active-trail {
+    color: #343434 !important;
+}
+ul.sf-main a:hover, .menu--account a:hover, a.user-login-block-link:hover, ul.sf-menu a:hover {
+	background-color: #343434 !important;
+    background: #343434 !important;
+}
+.active-trail.menuparent > a {
+    color: #343434 !important;
+}
+.active-trail {
+    background: #343434 !important;
+    background-color: #343434 !important;
+}
+.site-footer .active-trail {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+.main-content-container > #content ul > li a {
+	color: #343434 !important;
+}
+.button--add-to-cart {
+    color: #343434 !important;
+}
+.fieldset__legend {
+    color: #343434 !important;
+}
+.fieldset__label {
+    color: #343434 !important;
+}
+.calendar-view-pager__reset a, .calendar-view-pager .pager__item > * {
+    color: #343434;
+}
+div#block-rabble-publicmenu-4 a {
+    color: #343434 !important;
+}
+span.button.view-message-button a {
+    color: #343434 !important;
+}
+span.button.hide-message-button a {
+    color: #343434 !important;
+}
+.ck-button.ai-dropdown {
+    color: #343434;
+}
+#live-chat h4 {
+    color: #343434 !important;
+}
+li.active-trail.sf-depth-1.menuparent {
+    background: #343434 !important;
+    background-color: #343434 !important;
+}
+.tabs-wrapper ul > li.tabs__tab.is-active a {
+    background: #343434 !important;
+    background-color: #343434 !important;
+}
+ul.sf-menu a.is-active {
+    background: #343434 !important;
+    background-color: #343434 !important;
+}
+.sf-menu.menu li a {
+    color: #343434;
+}
+.site-header .sf-depth-2 > a {
+    color: #343434 !important;
+}
+.site-header .active-trail.sf-depth-1 > a.is-active {
+    color: #343434 !important;
+}
+li.sf-depth-1 > ul > li.sf-depth-2 a {
+    color: #343434 !important;
+}
+.site-header {
+    border-bottom: 1px solid #343434;
+}
+div#edit-actions > span.hide-submit-text {
+    background: #343434 !important;
+    background-color: #343434;
+}
+form#user-register-form > div {
+    color: #343434;
+}
+fieldset.captcha.captcha-type-challenge--recaptcha, fieldset.captcha.captcha-type-challenge--recaptcha * {
+}
+details#edit-timezone {
+}
+.pager__items li.pager__item.pager__item--active {
+    background: #343434 !important;
+    background-color: #343434 !important;
+}
+
+div.views-field.views-field-view > span > div.view-trash-flag-view-for-content > div > div {
+    background: rgb(52,52,52, .8) !important;
+}
+#content > article > div > div.flag.flag-trash {
+    background: rgb(52,52,52, .8) !important;
+}
+.content-container .block__title, .featured-container .block__title {
+    color: #343434;
+}
+.block__title {
+    color: #343434;
+}
+.site-footer .block__title {
+    color: #343434;
+}
+div#edit-field-agree-to-terms-wrapper {
+	color: #343434;
+}
+div#edit-account, div#edit-field-agree-to-terms-wrapper, details#edit-timezone, fieldset.captcha.captcha-type-challenge--recaptcha, div#edit-account *, fieldset.captcha.captcha-type-challenge--recaptcha * {
+	color: #343434;
+}
+div#block-try-ai-front-page-chatbot #live-chat {
+    background: #343434 !important;
+}
+.rabble-details__wrapper {
+}
+.region.region--related-content {
+    background: #343434;
+}
+.ai-deepchat--header {
+    background: #343434 !important;
+}
+div#block-block-content-missing-notice-for-body-field * {
+    color: #343434;
+}
+.aideamaker-create-button, .create-button {
+    border: 1px solid #343434 !important;
+}
+.ai-output-group {
+    border: 1px solid #343434;
+}
+.ai-text-generation-group {
+    border: 1px solid #343434;
+}
+.display-options-group {
+    border: 1px solid #343434;
+}
+body.role-anonymous.path-user div#page-wrapper {
+    background: #343434 !important;
+}
+
+
+
+
+
+
+/** Primary light Color #d4d4d4 */
+.calendar {
+    background: #d4d4d4 !important;
+}
+.field.field--name-field-sponsor > div > div.field__item {
+    background: #d4d4d4 !important;
+}
+#user-login-form .actions-suffix:active {
+    color: #d4d4d4 !important;
+}
+#user-login-form .actions-suffix:disabled,
+#user-login-form .actions-suffix.is-disabled {
+    color: #d4d4d4 !important;
+}
+#user-login-form .actions-suffix {
+    color: #d4d4d4 !important;
+}
+.tabs__link {
+    background-color: #d4d4d4 !important;
+}
+
+
+
+/** Even lighter Color #f4f4f4 */
+
+div#block-rabble-postingrestrictionnotice {
+    background: #f4f4f4 !important;
+    background-color: #f4f4f4 !important;
+}
+
+
+
+
+
+
+
+
+
+/** Lunar Rock Color #949B96 */
+
+
+
+
+
+
+
+/** Call to action Colors */
+a.login-to-register-button {
+    background: orange;
+}
+div.views-field.views-field-field-call-to-action > div > a.button {
+    background-color: orange;
+}
+
+
+
+
+/** Other Colors */
+.calendar-view-day__row:nth-child(3) {
+    background-color: lightcyan !important;
+}
+.calendar-view-day__row:nth-child(4) {
+    background-color: lightslategrey !important;
+}
+.button--add-to-cart {
+    background: orange !important;
+}
+div#block-block-content-missing-notice-for-body-field * {
+    background: wheat;
+}
+.field--name-field-image-selection .paragraphs-actions {
+    background: pink !important;
+
+}
+.page-node-type-ai-assistant #live-chat input#edit-clear-history {
+    background-color: red !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/** Dark Mode */
+button.darkmode-toggle {
+    z-index: 1000 !important;
+}
+.darkmode--activated #main-wrapper * {
+    background: #343434 !important;
+    color: #fff !important;
+}
+.darkmode-background {
+    background: #343434 !important;
+	background-color: #343434 !important;
+}
+.darkmode-toggle {
+    background: #343434;
+}
+.darkmode-layer {
+    background: unset !important;
+    /* background-color: #343434 !important; */
+    /* color: #fff !important; */
+}
+.darkmode--activated .main-content-container > #content .block-views, .darkmode--activated .main-content-container > #content > article {
+    background: unset;
+    background-color: unset;
+}
+.darkmode--activated div#page {
+    background: #343434 !important;
+    background-color: #343434 !important;
+    color: #fff !important;
+}
+
+.darkmode--activated .main-content-container > #content .block-views, .darkmode--activated .main-content-container > #content > article {
+    background: #343434 !important;
+    background-color: #343434 !important;
+    color: #fff !important;
+}
+.darkmode--activated #content > article > div > div.field.field--name-field-view.field--type-viewfield.field--label-hidden > div > div.views-element-container > div > div > .views-row  {
+    background: #343434 !important;
+    background-color: #343434 !important;
+    color: #fff !important;
+}
+
+.darkmode--activated #block-rabble-sharethis > div.block__content > div.sharethis-wrapper {
+    background: unset !important;
+	background-color: unset !important;
+}
+.darkmode--activated span.st_reddit_button {
+    background: #fff !important;
+    background-color: #fff !important;
+}
+.darkmode--activated #block-rabble-sharethis > div.block__content > div.sharethis-wrapper {
+    background: unset !important;
+	background-color: unset !important;
+}
+.darkmode--activated ul.sf-main a.is-active {
+	border: 1px solid #fff !important;
+}
+.darkmode--activated .main-content-container > #content ul > li a  {
+    color: #fff !important;
+}
+.darkmode--activated form#user-login-form {
+}
+.darkmode--activated form#user-login-form > * {
+}
+.darkmode--activated form#user-login-form > * > div {
+}
+.darkmode--activated form#user-login-form > * > div * {
+}
+.darkmode--activated div#main-wrapper * > a {
+    color: #fff;
+}
+body.role-anonymous.path-user div#main-wrapper {
+    background: #343434;
+}
+.darkmode--activated h1, .darkmode--activated h2, .darkmode--activated h3, .darkmode--activated h4, .darkmode--activated h5, .darkmode--activated h6 {
+    color: #fff !important;
+}
+.darkmode--activated .path-frontpage div.main-content__container.content-container > main > div.content-container.content-1-container > div > div {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+.darkmode--activated .path-frontpage div.main-content__container.content-container > main > div.content-container.content-2-container > div > div {
+    background: #245f8f !important;
+    background-color: #245f8f !important;
+}
+.darkmode--activated #main-wrapper .block-ai-chatbot .chat-element * {
+    background: #343434 !important;
+    color: #343434 !important;
+}
+.darkmode--activated  .block-ai-chatbot header {
+    border-bottom: 2px solid #fff;
+}
+.darkmode--activated  .main-content-container > #content > article > div > div.text-content {
+    background: #343434 !important;
+    border: none;
+}
+.darkmode--activated  .views-field.views-field-field-slide-header-text {
+    background: transparent !important;
+}
+.darkmode--activated  .views-slideshow-controls-bottom, .views-slideshow-controls-bottom > * {
+    background: transparent !important;
+}
+.darkmode--activated .slide-show .views-row * {
+    background: transparent !important;
+}
+.darkmode--activated #main-wrapper .views_slideshow_slide * {
+    background: unset !important;
+}
+.darkmode--activated  div#toolbar-item-administration-tray * {
+    color: #000;
+}
+.darkmode--activated  .listing-single-item .views-row {
+    border: 1px solid #fff;
+}
+.darkmode--activated #main-wrapper .slide-show * {
+    background: transparent !important;
+}
+.darkmode--activated #main-wrapper .slide-show li {
+    background: #343434 !important;
+}
+.darkmode--activated #main-wrapper .slide-show li:hover {
+    background: #fff !important;
+}
+.darkmode--activated .button {
+    border-color: #fff !important;
+}
+.darkmode--activated #input * {
+    color: #343434 !important;
+}
+.darkmode--activated  #text-input {
+    color: #343434 !important;
+}
+.darkmode--activated #main-wrapper div#text-input-container {
+    color: #343434 !important;
+}
+.darkmode--activated div#edit-account input#edit-mail, .darkmode--activated div#edit-account input#edit-name {
+    color: #343434 !important;
+}
+.darkmode--activated form#user-login-form div#edit-actions > input {
+    background: #245f8f !important;
+}
+.color-circle {
+    height: 20px !important;
+    width: 20px !important;
+    border-radius: 20px;
+    border: 1px solid #000;
+}

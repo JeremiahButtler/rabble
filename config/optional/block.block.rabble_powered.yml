@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rabble
+id: rabble_powered
+theme: rabble
+region: footer_bottom
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered By Rabble'
+  label_display: '0'
+  provider: system
+visibility: {  }

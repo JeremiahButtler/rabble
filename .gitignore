@@ -1,0 +1,16 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Local tooling / dependency artifacts (the theme itself ships no vendored deps)
+/vendor/
+/node_modules/
+package-lock.json
+
+# Secrets — never commit
+.env
+.env.local
+auth.json
+*.pem

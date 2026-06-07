@@ -1,0 +1,120 @@
+# This theme is marked as @internal. It is intended to evolve and change over
+# minor releases.
+# As the UI of Drupal improves between minor versions, the markup and assets in
+# the rabble theme will change. The rabble theme is not backwards compatible
+# If you wish to modify the output or assets of rabble you can:
+# 1. Copy the whole of rabble and rename it as your own theme. You will need to
+# manually manage your own updates if you want to stay up to date with rabble's
+# bug fixes and feature support.
+#
+# 2. Sub-theme rabble. This is only recommended if you want to make minor
+# tweaks and understand that rabble could break your modifications as it
+# changes.
+name: rabble
+type: theme
+base theme: false
+description: A clean, accessible, and flexible Drupal front-end theme.
+alt text: Screenshot of rabble, Drupal front-end theme.
+package: Core
+version: 11.x
+core_version_requirement: ^10 || ^11 || ^12
+libraries:
+  - rabble/global-styling
+regions:
+  header: Header / First Navigation
+  primary_menu: Right Corner Area
+  secondary_menu: User Account Menu
+  elevated_menu: Elevated Account Menus
+  hero: Slide Show
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  secondary_navigation: Second Navigation
+#  social: Social Bar
+  admin_messages: Admin Messages
+  page_messages: Page Messages
+  admin_buttons: Admin Buttons
+  page_buttons: Page Buttons
+  page_title_region: Page Title Region
+  tertiary_navigation: Third Navigation
+  content_above: Above Main Content
+  content: Share With Main Content Container
+  content_1: Main Content 1 
+  featured_1: Feature 1
+  content_2: Main Content 2
+  featured_2: Feature 2
+  content_3: Main Content 3
+  featured_3: Feature 3
+  content_4: Main Content 4
+  featured_4: Feature 4
+  content_5: Main Content 5
+  featured_5: Feature 5
+  content_below: Below Content
+  related_content: Related Content
+  sidebar: Left Sidebar
+  right-sidebar: Right Sidebar
+  footer_top: Footer Top
+  footer_left: Footer Left
+  footer_center: Footer Center
+  footer_right: Footer Right
+  footer_bottom: Footer Bottom
+  term_region: Taxonomy Term Pages
+  user_account_buttons: User Account Buttons
+  user_account_logged_in: User Account Contents When Logged In - Full
+  user_account_logged_in_left: User Account Contents When Logged In - Left Half
+  user_account_logged_in_right: User Account Contents When Logged In - Right Half
+  user_account_always: User Account Contents Always
+  user_profile_buttons: User Profile Buttons
+  user_profile_logged_in: User Profile Contents When Logged In
+  user_profile_always: User Profile Contents Always
+  none: - None -
+libraries-override:
+  core/drupal.ajax:
+    css:
+      component:
+        core/components/ajax-progress.module.css: css/components/ajax-progress.module.css
+  core/drupal.autocomplete:
+    css:
+      component:
+        core/components/autocomplete-loading.module.css: css/components/autocomplete-loading.module.css
+  system/admin:
+    css:
+      theme:
+        css/system.admin.css: false
+  core/drupal.checkbox: false
+  core/drupal.dropbutton:
+    css:
+      component:
+        misc/dropbutton/dropbutton.css: css/components/dropbutton.css
+  core/drupal.vertical-tabs:
+    css:
+      component:
+        misc/vertical-tabs.css: css/components/vertical-tabs.css
+  media/oembed.formatter: false
+  layout_builder/twocol_section: rabble/layout_builder_twocol_section
+  layout_builder/threecol_section: rabble/layout_builder_threecol_section
+  layout_builder/fourcol_section: rabble/layout_builder_fourcol_section
+libraries-extend:
+  core/drupal.message:
+    - rabble/drupal.message
+  core/drupal.collapse:
+    - rabble/details
+  core/drupal.dialog:
+    - rabble/drupal.dialog
+  core/drupal.progress:
+    - rabble/progress
+  core/drupal.tabledrag:
+    - rabble/tabledrag
+  layout_discovery/onecol:
+    - rabble/layout_discovery_section
+  layout_discovery/twocol_bricks:
+    - rabble/layout_discovery_section
+  layout_discovery/twocol:
+    - rabble/layout_discovery_section
+  layout_discovery/threecol_25_50_25:
+    - rabble/layout_discovery_section
+  layout_discovery/threecol_33_34_33:
+    - rabble/layout_discovery_section
+  node/drupal.node.preview:
+    - rabble/drupal.node.preview
+  content_moderation/content_moderation:
+    - rabble/content_moderation

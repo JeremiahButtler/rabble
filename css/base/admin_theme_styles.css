@@ -1,0 +1,43 @@
+/**
+ * For administration Theme
+ * 
+ */
+
+
+.field--name-field-day-title, .field--name-field-presentation-time > fieldset {
+    float: left;
+    margin-right: 5%;
+}
+.paragraphs-icon-button-collapse {
+    display: none;
+}
+.region.region-highlighted {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: lightblue;
+    padding: 0px 1%;
+}
+.ui-dialog.ai-ckeditor-modal.ui-widget.ui-widget-content{
+    left: unset !important;
+    max-width: unset !important;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+.role-administrator.path-user .hidden, .role-administrator.path-user details.rabble-details > .rabble-details__summary {
+    display: block !important;
+}
+
+.hidden {
+    display: unset;
+}
+
+
+
+
+
+
+
+
+
+
