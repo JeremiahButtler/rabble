@@ -36,15 +36,40 @@ each site adds a VCS repository pointing at this repo and requires
 used on AideaMaker. See `docs/site-composer-wiring.md`.
 
 **Next steps / open items:**
-- Wire AideaMaker's `composer.json` to require `drupal/rabble` (done through the
-  AideaMaker project, not from here — a reference was added there).
-- Wire Bearly Defense's `composer.json` likewise (through the Bearly Defense
-  project).
+- **Composer wiring of both live sites is pending** — blocked locally by Avast's
+  supply-chain shield (it prevents `php.exe`/composer from modifying
+  `composer.json`/`composer.lock`, so a valid lock can't be generated here), and
+  the strict SSH scope prevents running composer on the servers. To finish, either
+  (A) whitelist `C:\PHP for Windows\php.exe` in Avast and run `composer require`
+  in each site project locally, then commit + push, or (B) run `composer require`
+  on each server and commit the resulting `composer.json`+`composer.lock` back to
+  that site's repo (required because AideaMaker's deploy discards server lock
+  drift via `git checkout -- composer.lock`). Steps: `docs/site-composer-wiring.md`.
+- Reference docs `RABBLE-THEME.md` were placed in both site projects and left
+  **untracked** (per user choice) — not committed to either site repo.
 - Future theme edits: edit here, commit, tag, push; sites update via Composer.
 
 ---
 
 ## Change history
+
+### 2026-06-06 — Composer-wiring attempt; reference docs placed; prod left untouched
+- **What changed:** Placed `RABBLE-THEME.md` reference docs in the AideaMaker and
+  Bearly Defense projects (left untracked per user choice). Attempted to wire both
+  sites' `composer.json` to require `drupal/rabble`; reverted the partial
+  AideaMaker edit so both production repos are left unmodified.
+- **Why:** User chose "apply to both sites now," but the wiring cannot be safely
+  completed from this environment, and pushing an unverifiable `composer.lock` to a
+  site whose active theme is `rabble` risks downtime.
+- **Details:** Avast's supply-chain shield blocks `php.exe`/composer from modifying
+  `composer.json`/`composer.lock` locally, so no valid lock could be generated; the
+  strict SSH scope (rabble folder only) prevents server-side composer/log access.
+  Presented the user two paths (whitelist php locally, or server-side require +
+  commit the lock back to each repo) and awaited their choice. Cleaned up scratch
+  tooling (`_tools/composer.phar`).
+- **Files touched:** `AideaMaker/RABBLE-THEME.md` (untracked),
+  `Bearly Defense/RABBLE-THEME.md` (untracked); AideaMaker `composer.json` edited
+  then reverted (net no change).
 
 ### 2026-06-06 — Project created; theme extracted to its own public repo
 - **What changed:** Created the `Drupal Rabble Theme` project. Pulled the Rabble

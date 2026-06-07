@@ -41,12 +41,36 @@
   <p><strong>SSH scope (strict):</strong> this project may SSH only to touch
   <code>/var/www/html/aideamaker/web/themes/contrib/rabble</code>; everything else
   on that server belongs to other projects.</p>
-  <p><strong>Next:</strong> wire each site's <code>composer.json</code> to require
-  <code>drupal/rabble</code> (handled through each site's own project — see
-  <code>docs/site-composer-wiring.md</code>).</p>
+  <p><strong>Next:</strong> composer wiring of both live sites is <strong>pending</strong> —
+  blocked locally by Avast's supply-chain shield (php/composer can't modify
+  <code>composer.json</code>/<code>composer.lock</code>, so no valid lock can be
+  generated here) and by the strict SSH scope (no server-side composer). Finish via
+  either (A) whitelist <code>C:\PHP for Windows\php.exe</code> in Avast and run
+  <code>composer require</code> in each site project locally, then commit + push, or
+  (B) run <code>composer require</code> on each server and commit the resulting
+  <code>composer.json</code>+<code>composer.lock</code> back to that site's repo
+  (AideaMaker's deploy discards server lock drift). See
+  <code>docs/site-composer-wiring.md</code>.</p>
 </div>
 
 <h2>Change history</h2>
+
+<div class="entry">
+  <p class="date">2026-06-06 — Composer-wiring attempt; reference docs placed; prod left untouched</p>
+  <p><strong>What changed:</strong> placed <code>RABBLE-THEME.md</code> reference
+  docs in the AideaMaker and Bearly Defense projects (left untracked per user
+  choice); attempted to wire both sites' <code>composer.json</code> to require
+  <code>drupal/rabble</code>, then reverted the partial AideaMaker edit so both
+  production repos are left unmodified.</p>
+  <p><strong>Why:</strong> user chose "apply to both sites now," but the wiring
+  can't be safely completed from this environment, and pushing an unverifiable
+  <code>composer.lock</code> to a site whose active theme is <code>rabble</code>
+  risks downtime.</p>
+  <p><strong>Details:</strong> Avast's supply-chain shield blocks php/composer from
+  modifying <code>composer.json</code>/<code>composer.lock</code> locally; the
+  strict SSH scope prevents server-side composer/log access. Presented two paths
+  and awaited the user's choice. Cleaned up scratch tooling.</p>
+</div>
 
 <div class="entry">
   <p class="date">2026-06-06 — Project created; theme extracted to its own public repo</p>
