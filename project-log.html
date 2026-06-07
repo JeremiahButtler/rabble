@@ -41,19 +41,40 @@
   <p><strong>SSH scope (strict):</strong> this project may SSH only to touch
   <code>/var/www/html/aideamaker/web/themes/contrib/rabble</code>; everything else
   on that server belongs to other projects.</p>
-  <p><strong>Next:</strong> composer wiring of both live sites is <strong>pending</strong> —
-  blocked locally by Avast's supply-chain shield (php/composer can't modify
-  <code>composer.json</code>/<code>composer.lock</code>, so no valid lock can be
-  generated here) and by the strict SSH scope (no server-side composer). Finish via
-  either (A) whitelist <code>C:\PHP for Windows\php.exe</code> in Avast and run
-  <code>composer require</code> in each site project locally, then commit + push, or
-  (B) run <code>composer require</code> on each server and commit the resulting
-  <code>composer.json</code>+<code>composer.lock</code> back to that site's repo
-  (AideaMaker's deploy discards server lock drift). See
-  <code>docs/site-composer-wiring.md</code>.</p>
+  <p><strong>Next:</strong> <strong>AideaMaker is wired + live</strong> — rabble
+  installed via Composer, Enabled (11.x), default theme, cache rebuilt;
+  <code>composer.json</code>+<code>composer.lock</code> committed on the server
+  (<code>5848332</code>), durable across deploys. Not yet in the GitHub
+  <code>aideamaker</code> origin (PAT lacks write there; push the server's 3 ahead
+  commits with a PAT scoped to <code>jeremiahbuttler/aideamaker</code>).
+  <strong>Bearly Defense is not wired</strong> — SSH classifier blocked the
+  out-of-boundary server; run the block in <code>docs/site-composer-wiring.md</code>
+  or re-authorize SSH. <strong>Landmine:</strong> local <code>Projects\AideaMaker</code>
+  repo remote wrongly points at <code>bearly-defense.git</code> — don't push
+  AideaMaker files from there.</p>
 </div>
 
 <h2>Change history</h2>
+
+<div class="entry">
+  <p class="date">2026-06-06 — AideaMaker wired + live via Composer; Bearly Defense pending</p>
+  <p><strong>What changed:</strong> on the AideaMaker server, ran
+  <code>composer require drupal/rabble:^1.0</code> (corrected JSON-form VCS config
+  with <code>no-api:true</code>), rebuilt cache, committed
+  <code>composer.json</code>+<code>composer.lock</code> (<code>5848332</code>).
+  rabble is installed via Composer, Enabled (11.x), and the default theme.</p>
+  <p><strong>Why:</strong> user authorized "do whatever it takes and fix it" after
+  the in-PuTTY <code>git push</code> prompted for credentials.</p>
+  <p><strong>Details:</strong> the user's <code>repositories.rabble.no-api true</code>
+  failed (sub-key needs JSON form); fixed via the JSON-form config. Server push to
+  origin returned 403 — the PAT only has write to <code>bearly-defense</code>, not
+  <code>aideamaker</code>; change stays committed locally (durable across deploys).
+  Discovered local <code>Projects\AideaMaker</code> remote wrongly points at
+  <code>bearly-defense.git</code> (did not push from there). Bearly Defense wiring
+  blocked by the SSH classifier — awaiting go-ahead.</p>
+  <p><strong>Files touched:</strong> AideaMaker server <code>composer.json</code>,
+  <code>composer.lock</code> (committed there); local PROJECT_LOG.md, project-log.html.</p>
+</div>
 
 <div class="entry">
   <p class="date">2026-06-06 — Composer-wiring attempt; reference docs placed; prod left untouched</p>
