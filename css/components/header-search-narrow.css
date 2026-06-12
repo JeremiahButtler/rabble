@@ -50,8 +50,8 @@
 }
 
 .block-search-narrow input[type="search"]:focus {
-  outline: solid 4px transparent;
-  outline-offset: -4px;
+  outline: solid 3px var(--color--primary-50);
+  outline-offset: -3px;
   background-size: 100% 0.3125rem;
 }
 
@@ -125,8 +125,8 @@
 }
 
 .block-search-narrow .search-form__submit:focus {
-  outline: solid 4px transparent;
-  outline-offset: -4px;
+  outline: solid 3px var(--color--primary-50);
+  outline-offset: -3px;
   box-shadow: none;
 }
 

@@ -16,6 +16,9 @@
   .date { font-weight: 600; }
   code { background: rgba(127,127,127,.18); padding: .1em .35em; border-radius: 4px; }
   a { color: #2a7ae2; }
+  #search { display: block; width: 100%; box-sizing: border-box; padding: .5rem .75rem;
+            margin: 1rem 0 .5rem; border: 1px solid rgba(127,127,127,.4); border-radius: 6px;
+            font: inherit; background: rgba(127,127,127,.07); }
 </style>
 </head>
 <body>
@@ -60,6 +63,26 @@
 </div>
 
 <h2>Change history</h2>
+
+<input type="text" id="search" placeholder="Search history…" aria-label="Search change history">
+
+<div class="entry">
+  <p class="date">2026-06-07 — Skill reconciliation: project-tracking updated</p>
+  <p><strong>What changed:</strong> re-applied the updated <code>project-tracking</code>
+  skill. Added search/filter input to this page (<code>Search history…</code> placeholder,
+  real-time JS filter on change-history entries). Added <code>PROJECT_LOG.md</code> and
+  <code>project-log.html</code> to <code>.gitignore</code> (required: repo is public).
+  Updated <code>.claude-project-skills.json</code> fingerprint.</p>
+  <p><strong>Why:</strong> upstream <code>project-tracking</code> skill changed (fingerprint
+  mismatch); reconciliation re-applies the delta.</p>
+  <p><strong>Details:</strong> new skill requirements applied: (1) log pages must include a
+  client-side search/filter input above Change History; (2) log files must be gitignored in
+  public repos and stored in the central private <code>JeremiahButtler/project-logs</code>
+  repo. Cross-verified FEATURES.md vs PROJECT_LOG.md — no drift found.</p>
+  <p><strong>Files touched:</strong> <code>project-log.html</code> (search input + JS),
+  <code>.gitignore</code> (log files added), <code>.claude-project-skills.json</code>
+  (fingerprint updated).</p>
+</div>
 
 <div class="entry">
   <p class="date">2026-06-07 — AideaMaker server→git auto-deploy repaired (affects how rabble updates propagate)</p>
@@ -218,5 +241,13 @@
   Counter skill set), and added a reference in the AideaMaker project.</p>
 </div>
 
+<script>
+document.getElementById('search').addEventListener('input', function() {
+  var q = this.value.toLowerCase();
+  document.querySelectorAll('.entry').forEach(function(e) {
+    e.style.display = e.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+});
+</script>
 </body>
 </html>

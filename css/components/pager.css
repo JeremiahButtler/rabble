@@ -29,6 +29,8 @@
   justify-content: center;
   width: var(--sp2-5);
   height: var(--sp2-5);
+  min-width: 2.75rem;
+  min-height: 2.75rem;
   cursor: default;
   color: var(--color-text-neutral-soft);
   background-color: var(--color--white);

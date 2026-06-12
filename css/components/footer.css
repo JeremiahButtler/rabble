@@ -76,6 +76,21 @@
     margin: 10px 1%;
     /* float: left; */
 }
+
+@media (max-width: 640px) {
+  .footer-middle {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+    width: 100%;
+  }
+  .footer-middle > .region {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: var(--sp1) var(--sp);
+  }
+}
 .footer-top {
 }
 .footer-bottom, .footer-top {

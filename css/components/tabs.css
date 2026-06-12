@@ -81,10 +81,10 @@ html:not(.js) .tabs__tab {
   border: var(--tabs-border-width) solid var(--tabs-border-color);
   /* background-color: var(--tabs-background-color);
   font-size: var(--tabs-font-size); */
-	background-color: #848484;
-    color: #f4f4f4;
+	background-color: var(--tabs-background-color);
+    color: var(--color-text-neutral-loud);
     font-weight: bold;
-    font-size: 14px;
+    font-size: var(--tabs-font-size);
 }
 .tabs__link:hover {
   color: var(--tabs-text-color-active);

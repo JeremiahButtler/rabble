@@ -839,6 +839,16 @@ body.role-anonymous.path-user div#page-wrapper {
     background: #343434 !important;
 }
 
+/* Login/register/password — ensure text is legible on dark background */
+body.role-anonymous.path-user label,
+body.role-anonymous.path-user .form-item__label,
+body.role-anonymous.path-user .description,
+body.role-anonymous.path-user .form-item__description,
+body.role-anonymous.path-user p,
+body.role-anonymous.path-user a:not(.button) {
+  color: var(--color--white);
+}
+
 
 
 

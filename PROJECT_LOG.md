@@ -60,6 +60,12 @@ used on AideaMaker. See `docs/site-composer-wiring.md`.
 
 ## Change history
 
+### 2026-06-07 — Skill reconciliation: project-tracking updated
+- **What changed:** Re-applied the updated `project-tracking` skill. Added search/filter input to `project-log.html` (`Search history…` placeholder, real-time JS filter on change-history entries). Added `PROJECT_LOG.md` and `project-log.html` to `.gitignore` (required: repo is public). Updated `.claude-project-skills.json` fingerprint.
+- **Why:** Upstream `project-tracking` skill changed (fingerprint mismatch); reconciliation re-applies the delta.
+- **Details:** Key new requirements in the skill: (1) log pages must include a client-side search/filter input above the Change History section; (2) log files must be gitignored in public repos and stored in the central private `JeremiahButtler/project-logs` repo. Both applied. Cross-verified FEATURES.md vs PROJECT_LOG.md — no drift found.
+- **Files touched:** `project-log.html` (search input + JS), `.gitignore` (log files added), `.claude-project-skills.json` (fingerprint updated).
+
 ### 2026-06-07 — AideaMaker server→git auto-deploy repaired (affects how rabble updates propagate)
 - **What changed:** Fixed the broken AideaMaker server→git auto-update flow and brought
   `aideamaker.git` fully in sync with the server. Server == origin == `00b8174`. (Work

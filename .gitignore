@@ -4,10 +4,18 @@ Thumbs.db
 *.swp
 *~
 
+# Project logs — kept out of this public repo; stored in JeremiahButtler/project-logs
+PROJECT_LOG.md
+project-log.html
+
 # Local tooling / dependency artifacts (the theme itself ships no vendored deps)
 /vendor/
 /node_modules/
 package-lock.json
+
+# Local design-review workspace (mockups, screenshots, throwaway Drupal test site)
+/.mockups/
+/.local-test/
 
 # Secrets — never commit
 .env

@@ -12,7 +12,7 @@
 
 .container {
   width: 100%;
-  /* max-width: var(--max-width); */
+  max-width: var(--max-width);
   padding-inline: var(--container-padding);
 
   /* This fixes an issue where if the toolbar is open in vertical mode, and
