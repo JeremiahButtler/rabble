@@ -17,6 +17,9 @@ package-lock.json
 /.mockups/
 /.local-test/
 
+# Auto-deploy propagation run logs (runtime only)
+/automation/logs/
+
 # Secrets — never commit
 .env
 .env.local

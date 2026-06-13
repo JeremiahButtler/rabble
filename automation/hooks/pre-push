@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# rabble pre-push hook - auto-propagate a new release to its Composer consumers.
+#
+# Consumers (AideaMaker, Bearly Defense) install drupal/rabble via Composer with
+# the constraint "^1.0", so only a NEW TAG changes what they resolve. When a push
+# includes a tag, launch a detached PowerShell helper that waits for the tag to
+# reach origin, then bumps each consumer site's composer.lock and pushes - each
+# site's existing 60s deploy timer then ships it to production. Pushing only
+# branch commits (no tag) does nothing here.
+#
+# This file is the TRACKED source at automation/hooks/pre-push. .git/hooks is not
+# version-controlled - install it with: pwsh automation/install-hooks.ps1
+#
+# stdin lines: <local ref> <local sha> <remote ref> <remote sha>
+
+PROP='C:\Users\jeremy\Documents\Projects\Drupal Rabble Theme\automation\propagate-after-push.ps1'
+
+has_tag=0
+while read -r local_ref local_sha remote_ref remote_sha; do
+  case "$remote_ref" in
+    refs/tags/*) has_tag=1 ;;
+  esac
+done
+
+if [ "$has_tag" -eq 1 ]; then
+  # Detach fully so neither the hook nor the push waits on propagation.
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -WindowStyle Hidden -ArgumentList '-NoProfile','-ExecutionPolicy','Bypass','-File','$PROP'" >/dev/null 2>&1 &
+fi
+
+exit 0
